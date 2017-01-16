@@ -76,8 +76,7 @@ Cada programa en Retina, inicia con el cursor en la posición (0,0) del plano ca
 - rotater(`number`): rota el cursor sentido horario el número de grados pasado como parámetro.
 - setposition(`number`,`number`): posiciona el curso en el punto `(x,y)` del plano, donde el primer parámetro corresponde a la componente `x` y segundo parámetro a la componente `y`.
 - arc(`number`,`number`): dibuja un arco de `n` grados y radio `r`, quedando el cursor equidistante a todo punto del arco; sin marcar más que el centro y el arco. A continuación, un ejemplo de como se vería un arco de 180 grados y de radio 50; partiendo de la posición inicial.
-
-![Imgur](http://i.imgur.com/zluwdwK.png)
+    - ![Imgur](http://i.imgur.com/zluwdwK.png)
 
 ## Identificadores
 El identificador de una variable se forma por una cadena de caracteres de longitud arbitraria. Los caracteres permitidos van desde `a` hasta `z`, incluyendo sus respectivas mayúsculas, además de dígitos y el caracter guión bajo (`_`). Los identificadores no pueden comenzar con un dígito, guión bajo o un caracter en mayúscula, cabe acotar que los identificadores son sensibles a minúsculas y mayúsculas.
@@ -137,6 +136,8 @@ Teniendo un identificador `i`, asociado a un tipo de dato `t` en Retina, es posi
 
 ### Salida
 La instricción `write x1, x2, ..., xn;`, donde `xi` puede ser una cadena de caracteres encerrada entre comillas dobles o una expresión de cualquier tipo, recorre la secucuencia de elementos de izquierda a derecha e imprimiendo cada elemento en pantalla; esta secuencia no puede ser vacia. Además, existe la instrucción `writeln`, que realiza la imprisión descrita previamente y adicionalmente imprime un salto de linea al final.
+
+La cadena de caracteres, además de estar encerrada en comillas dobles (`"`), no es posible que tenga salto de linea, comillas dobles o *backslashes* (`\`) a no ser de que estén escapados, es decir, `\n`, `\\` y `\"`.
 
 ### Asiganación
 Dado un identificador `i` y una expresión `e` de un tipo `t`, se puede formar una instrucción de asignación `i = e;`. El identificador `i` debe haber sido declarado con el mismo tipo `t` de la expresión, en caso contrario debe arrojarse un error.
