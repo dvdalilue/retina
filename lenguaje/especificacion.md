@@ -232,7 +232,7 @@ program
 end;
 ```
 
-##### Caso particular (`repeat`)
+##### Caso particular `repeat`
 Se puede construir una iteración determinada `repeat n times is end;` como un caso particular de `for`, con una expresión `n` de tipo `number` y una secuencia de instrucciones `is`. Dicha instrucción es equivalavente a `for i from 1 to n do end;` pero no existe un contador.
 
 ### Funciones
