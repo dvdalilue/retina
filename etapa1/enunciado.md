@@ -17,6 +17,7 @@ La especificación puede verse en este [documento].
 - En el caso de que un *token* no sea reconocido, se debe seguir leyendo el archivo hasta el final y reportar todo elemento desconcido.
 - El contador de linea y columna comienzan a partir de `1`.
 - No es debe realizar ningún analisis sintáctico, ni reportar errores semánticos o de contexto.
+- La entrega será hasta el día `jueves 26 de enero`, hora máxima `11:59pm`.
 - La entrega de esta etapa debe hacerse enviando un correo a `09-10444@usb.ve`, con `[CI3725]` como prefijo en el asunto y junto al correo, un archivo comprimido `.tar.gz`. Siguiendo los siguientes lineamientos.
     - El comprimido sólo debe tener los archivos fuentes necesarios para correr su programa.
     - El comprimido debe tener como nombre `CI3725_etapa_1_xx-xxxxx_xx-xxxxx.tar.gz`
