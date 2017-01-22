@@ -137,7 +137,7 @@ Teniendo un identificador `i`, asociado a un tipo de dato `t` en Retina, es posi
 ### Salida
 La instricción `write x1, x2, ..., xn;`, donde `xi` puede ser una cadena de caracteres encerrada entre comillas dobles o una expresión de cualquier tipo, recorre la secucuencia de elementos de izquierda a derecha e imprimiendo cada elemento en pantalla; esta secuencia no puede ser vacia. Además, existe la instrucción `writeln`, que realiza la imprisión descrita previamente y adicionalmente imprime un salto de linea al final.
 
-La cadena de caracteres, además de estar encerrada en comillas dobles (`"`), no es posible que tenga salto de linea, comillas dobles o *backslashes* (`\`) a no ser de que estén escapados, es decir, `\n`, `\\` y `\"`.
+La cadena de caracteres, o literal de *string*, es una secuencia de caracteres imprimibles encerrada en comillas dobles (`"`). Además, en dicha secuencia no es posible que exista un salto de linea, comillas dobles o *backslashes* (`\`) a no ser de que estén escapados, es decir, `\n`, `\\` y `\"`.
 
 ### Asiganación
 Dado un identificador `i` y una expresión `e` de un tipo `t`, se puede formar una instrucción de asignación `i = e;`. El identificador `i` debe haber sido declarado con el mismo tipo `t` de la expresión, en caso contrario debe arrojarse un error.
