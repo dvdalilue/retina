@@ -50,7 +50,7 @@ Cabe destacar que el uso del formato [pbm] es más que un requerimiento; es una 
 
 En Retina, cada lexema esta separado por un espacio en blanco y un espacio en blanco se considera a todo espacio, salto de línea y tabs. Cabe destacar que los espacios en blanco son ignorados.
 
-A partir de un caracter numeral (`#`) hasta el salto de línea, será considerado un espacio en blanco. A menos que éste se encuentre un literal de cadena de caracteres.
+A partir de un caracter numeral (`#`) hasta el salto de línea, será considerado como un espacio en blanco. A menos que éste se encuentre un literal de cadena de caracteres.
 
 ## Literales y tipos de datos
 
