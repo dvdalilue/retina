@@ -16,7 +16,7 @@ La especificación puede verse en este [documento].
 - Debe establecer una correspondencia entre las producción de su gramática y la construcción de un nodo de su árbol sintáctico abstracto.
 - Su programa debe ejecutarse con el comando `./retina programa.rtn` desde la linea de comandos. Sólo habrá un argumento en la misma, el cual será la ruta de un archivo.
 - Se debe abrir dicho archivo y consumirlo por completo para producir un árbol sintáctico abstracto, si la sintaxis del programa es válida. El analizador sintáctico trabaja a partir de la secuencia de *tokens* generada de su analizador lexicográfico.
-- En el caso de que existan errors lexicográficos, debe reportarlos todos; al igual que la primera entrega. En caso de que exista un error sintáctico, deberá reportar el primero que encuentre; indicando la posición y *token* donde ocurrió el error.
+- En el caso de que existan errores lexicográficos, debe reportarlos todos; al igual que la primera entrega. En caso de que exista un error sintáctico, deberá reportar el primero que encuentre; indicando la posición y *token* donde ocurrió el error.
 - Si toda el archivo de entrada es consumido y reconocido como válido, debe imprimirse cada nodo del árbol, es decir, lo que representa y los subárboles que contenga. El uso de indentación es necesario para identificar la contención de los árboles.
 - Los nombres de cada nodo del árbol, la correspondencia de entre los elementos sintácticos y los nodos del árbol sintáctico abstracto, el formato de salida y errores quedan a su desición. Sólo se necesita que se brinde alguna información representativa de lo que significa cada nodo.
 - La entrega será hasta el día `lunes 6 de febrero`, hora máxima `11:59pm`.
