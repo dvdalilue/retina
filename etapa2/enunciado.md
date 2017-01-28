@@ -26,7 +26,7 @@ La especificación puede verse en este [documento].
     - `xx-xxxxx` será sustituido por el carné de los miembros del grupo
     - Si la entrega es realizada por alguien que no tiene pareja, el nombre del comprimido será `CI3725_etapa_2_xx-xxxxx.tar.gz`.
 
-## Ejemplo
+## Ejemplos
 
 Aquí se muestra lo que sería una porción de un programa y su representación en árbol.
 
@@ -66,6 +66,12 @@ Bloque:
                     lado derecho:
                         Literal Numérico:
                             valor: 13
+```
+
+Aquí se muestra como sería un error sintáctico, con la instrucción `x = while`, donde el *token* `while` comienza en la columna `4` y se ubica en la linea `n`.
+
+```
+linea <n>, columna 4: token inesperado: palabra reservada: 'while'
 ```
 
 [documento]: <https://github.com/dvdalilue/retina/blob/master/lenguaje/especificacion.md>
