@@ -57,7 +57,7 @@ Bloque:
             lado derecho:
                 Literal Numérico:
                     valor: 27
-        Salida:
+        Salida con salto:
             expresiones:
                 Suma:
                     lado izquierdo:
