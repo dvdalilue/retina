@@ -19,7 +19,7 @@ La especificación puede verse en este [documento].
 - En el caso de que existan errores lexicográficos, debe reportarlos todos; al igual que la primera entrega. En caso de que exista un error sintáctico, deberá reportar el primero que encuentre; indicando la posición y *token* donde ocurrió el error.
 - Si toda el archivo de entrada es consumido y reconocido como válido, debe imprimirse cada nodo del árbol, es decir, lo que representa y los subárboles que contenga. El uso de indentación es necesario para identificar la contención de los árboles.
 - Los nombres de cada nodo del árbol, la correspondencia de entre los elementos sintácticos y los nodos del árbol sintáctico abstracto, el formato de salida y errores quedan a su desición. Sólo se necesita que se brinde alguna información representativa de lo que significa cada nodo.
-- La entrega será hasta el día `lunes 6 de febrero`, hora máxima `11:59pm`.
+- La entrega será hasta el día `viernes 10 de febrero`, hora máxima `11:59pm`.
 - La entrega de esta etapa debe hacerse enviando un correo a `09-10444@usb.ve`, con `[CI3725]` como prefijo en el asunto y junto al correo, un archivo comprimido `.tar.gz`. Siguiendo los siguientes lineamientos.
     - El comprimido sólo debe tener los archivos fuentes necesarios para correr su programa.
     - El comprimido debe tener como nombre `CI3725_etapa_2_xx-xxxxx_xx-xxxxx.tar.gz`
