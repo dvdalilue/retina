@@ -35,7 +35,7 @@ $backslash = ["\\n]
 @double = $digit+\.$digit+
 @number = ($digit+ | @double)
 
--- Regular expressions & data type correspondances
+-- Regular expressions & data type correspondences
 retina :-
     @space      { skip                         }
     "program"   { mkL (const TkProgram)        }
