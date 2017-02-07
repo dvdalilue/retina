@@ -1,0 +1,38 @@
+#! /usr/bin/ruby
+
+require_relative 'calculator_parser'
+
+def main
+  # Check extension
+  ARGV[0] =~ /\w+\.calc/
+  if $&.nil?; puts "Unknown file extension"; return; end
+  # Open file as a string
+  begin
+    input = File::read(ARGV[0])
+  rescue
+    puts "File not found"
+    return
+  end
+  # Create lexer
+  lexer = Lexer.new input
+  # Get tokens until input is empty
+  begin
+    while lexer.catch_lexeme; end
+
+    begin
+      lexer = Lexer.new input
+      parser = Parser.new
+      ast = parser.parse lexer
+      ast.print_ast
+    rescue SyntacticError => e
+      puts e
+      return
+    end
+  # Rescue the first lexicographic error.
+  rescue LexicographicError => e
+    puts e
+    return
+  end
+end
+
+main
