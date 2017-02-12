@@ -1,0 +1,10 @@
+program
+    with
+        number i;
+    do
+        for j from 3 to 9 do
+            write (j * 3), " ";
+            j = j + 3;
+        end;
+    end;
+end;
