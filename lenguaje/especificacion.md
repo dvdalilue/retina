@@ -32,6 +32,7 @@ Salida:
 Un ejemplo adicional:
 ```
 program
+    with
     do
         for i from 1 to 100 do
             forward(i * 2); # Traza una línea por 50 puntos
