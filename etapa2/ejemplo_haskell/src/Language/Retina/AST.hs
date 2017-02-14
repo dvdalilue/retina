@@ -6,7 +6,7 @@ import Language.Retina.Token
 type Identifier = Lexeme Token
 type LiteralNumber = Lexeme Token
 
-data Program = Program [Instruction]
+data Program = Program [Function] [Instruction]
     deriving (Show)
 
 data Function =

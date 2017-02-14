@@ -92,7 +92,7 @@ import Data.Typeable
 
 %%
 
-Program: Functions "program" Instructions "end" ";" { Program $3 }
+Program: Functions "program" Instructions "end" ";" { Program (reverse $1) $3 }
 
 Functions:                        { []    }
          | Functions Function ";" { $2:$1 }
