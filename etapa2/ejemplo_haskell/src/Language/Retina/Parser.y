@@ -170,7 +170,7 @@ Args:             { [] }
     | ArgSequence { $1 }
 
 ArgSequence: Expression          { [$1]  }
-           | Args "," Expression { $3:$1 }
+           | ArgSequence "," Expression { $3:$1 }
 
 {
 
