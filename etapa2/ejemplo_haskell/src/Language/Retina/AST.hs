@@ -28,13 +28,13 @@ data Instruction =
     Block           [Declaration] [Instruction]                             |
     Return          Expression                                              |
     Read            Identifier                                              |
-    Write           [Writeable]                                             |
-    WriteLn         [Writeable]
+    Write           [Writable]                                             |
+    WriteLn         [Writable]
     deriving (Show)
 
-data Writeable =
-    WriteableString (Lexeme Token) |
-    WriteableExpression Expression
+data Writable =
+    WritableString (Lexeme Token) |
+    WritableExpression Expression
     deriving(Show)
 
 data Declaration =

@@ -121,8 +121,8 @@ Instruction: Expression                                                         
            | "with" Declarations "do" Instructions "end"                                { Block (reverse $2) $4                        }
            | "return" Expression                                                        { Return $2                                    }
            | "read" identifier                                                          { Read $2                                      }
-           | "write" Writeables                                                         { Write (reverse $2)                           }
-           | "writeln" Writeables                                                       { WriteLn (reverse $2)                         }
+           | "write" Writables                                                          { Write (reverse $2)                           }
+           | "writeln" Writables                                                        { WriteLn (reverse $2)                         }
 
 Declarations:                              { []    }
             | Declarations Declaration ";" { $2:$1 }
@@ -136,11 +136,11 @@ Type: "number"  { NumberType  }
 IdentifierList: identifier                    { [$1]  }
               | IdentifierList "," identifier { $3:$1 }
 
-Writeables: Writeable                { [$1]  }
-          | Writeables "," Writeable { $3:$1 }
+Writables: Writable                { [$1]  }
+         | Writables "," Writable { $3:$1 }
 
-Writeable: string     { WriteableString     $1 }
-         | Expression { WriteableExpression $1 }
+Writable: string     { WritableString     $1 }
+        | Expression { WritableExpression $1 }
 
 Expression : "(" Expression ")"          { $2                      }
            | "true"                      { ExpTrue                 }

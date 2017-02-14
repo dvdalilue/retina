@@ -17,7 +17,7 @@ lexicalAnalysis s =
                         loop $! (token:ls)
 
 lexicalErrorChecker :: [Lexeme Token] -> IO (Either [Lexeme Token] [Lexeme Token])
-lexicalErrorChecker ts = return tokens -- mapM_ print $ reverse tokens
+lexicalErrorChecker ts = return tokens
     where
         errors = filter checkErrors ts
         tokens = if null errors
