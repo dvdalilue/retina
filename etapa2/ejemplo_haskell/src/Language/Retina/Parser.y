@@ -103,8 +103,8 @@ Function: "func" identifier "(" Parameters ")" "begin" Instructions "end"       
 Parameters:                   { [] }
           | ParameterSequence { $1 }
 
-ParameterSequence: Parameter                { [$1] }
-                 | Parameters "," Parameter { $3:$1 }
+ParameterSequence: Parameter                       { [$1]  }
+                 | ParameterSequence "," Parameter { $3:$1 }
 
 Parameter: Type identifier { Parameter $1 $2 }
 
