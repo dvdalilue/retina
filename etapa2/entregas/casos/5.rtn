@@ -1,6 +1,4 @@
 program
-    3 > 5;
     writeln true, false;
-    4 + true;
     "unexpected string literal in quotes";
 end;

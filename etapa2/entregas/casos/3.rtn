@@ -15,7 +15,6 @@ end;
 program
     my_forward();
     with do end; # Dummy block
-    2; # This 2 does nothing
     with
         number x = 37;
     do
