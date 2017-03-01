@@ -70,7 +70,7 @@ data Token =
 instance Show Token where
     show t = case t of
         TkProgram          -> "reserved word: 'program'"
-        TkWith             -> "reserved word: 'wtih'"
+        TkWith             -> "reserved word: 'with'"
         TkDo               -> "reserved word: 'do'"
         TkSemicolon        -> "symbol: ';'"
         TkEnd              -> "reserved word: 'end'"

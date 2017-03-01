@@ -111,7 +111,7 @@ Parameter: Type identifier { Parameter $1 $2 }
 Instructions:                              { []    }
             | Instructions Instruction ";" { $2:$1 }
 
-Instruction: Expression                                                                 { FreeExpression $1                            }
+Instruction: identifier "(" Args ")"                                                    { ProcedureCall $1 $3                          }
            | identifier "=" Expression                                                  { Assignment $1 $3                             }
            | "if" Expression "then" Instructions "end"                                  { ConditionalIf $2 (reverse $4)                }
            | "if" Expression "then" Instructions "else" Instructions "end"              { ConditionalElse $2 (reverse $4) (reverse $6) }
@@ -143,9 +143,9 @@ Writable: string     { WritableString     $1 }
         | Expression { WritableExpression $1 }
 
 Expression : "(" Expression ")"          { $2                      }
+           | identifier "(" Args ")"     { FunctionCall $1 $3      }
            | "true"                      { ExpTrue                 }
            | "false"                     { ExpFalse                }
-           | identifier "(" Args ")"     { FunctionCall      $1 $3 }
            | number                      { ExpNumber         $1    }
            | identifier                  { ExpVariable       $1    }
            | "not" Expression            { ExpNot            $2    }

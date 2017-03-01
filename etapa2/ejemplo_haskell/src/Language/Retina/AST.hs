@@ -18,7 +18,7 @@ data Parameter = Parameter Type Identifier
     deriving(Show)
 
 data Instruction =
-    FreeExpression  Expression                                              |
+    ProcedureCall   Identifier    [Expression]                              |
     Assignment      Identifier    Expression                                |
     ConditionalIf   Expression    [Instruction]                             |
     ConditionalElse Expression    [Instruction] [Instruction]               |
