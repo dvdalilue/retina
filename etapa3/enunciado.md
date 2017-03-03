@@ -143,7 +143,7 @@ Aquí se muestra un error de tipos.
 ```
 program
     with
-        p : boolean;
+        boolean p;
     do
         p = 27;
     end; 
