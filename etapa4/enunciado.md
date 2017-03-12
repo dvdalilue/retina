@@ -1,0 +1,27 @@
+# Retina
+
+## Etapa 4 - Intérprete
+
+En este documento se especifican los requerimientos necesarios para la cuarta entrega en el desarrollo de su intérprete. Aquí no estarán presente características del lenguaje, sintaxis o ningún tipo de especificación.
+
+La especificación puede verse en este [documento].
+
+## Requerimientos
+
+- El objetivo principal de esta etapa es finalizar el intérprete para Retina usando el lenguaje que haya elegido, ya sea `Ruby` o `Haskell`, junto a su respectiva herramienta generadora de *parsers*. Definiendo las funciones o métodos para que el intérprete pueda ejecutar los programas. Independientemente del caso, ya debe haber definido una gramática que reconozca al lenguaje, siguiendo el formato de la herramienta.
+    - Racc, en el caso de `Ruby`.
+    - Happy, en el caso de `Haskell`.
+- Un objetivo específico es, dado un programa que ya fue verificado, recorrer nuevamente el árbol y realizar la acción correspondiente a cada objeto del lenguaje en el orden correcto.
+- Cuando se ejecuta el intérprete, se debe abrir el archivo que se indica en el primer y único argumento en la línea de comandos, luego de realizar el análisis lexicográfico, sintáctico y de contexto, resulta en un árbol sintáctico abstracto que representa un programa verificado que finalmente se ejecutará. En esencia se usará la misma estructura de árbol pero se le incorporará un nuevo comportamiento para cada componente del lenguaje, es de esperar que el recorrido será similar al que se hizo para la tercera entrega.
+- Si existen errores lexicográficos, deberá reportar todos los que encuentre. Si existen errores sintácticos, deberá reportar el primero que encuentre. Si existen errores de contexto, deberá reportar el primero que encuentre. Si existe un error al momento de la ejecución, deberá abortar de inmediato y reportar el error encontrado.
+- Para esta entrega no habrá ninguna salida esperada por la salida estandar, a menos que sea un mensaje de error durante el análisis estático previo a la ejecución o alguna impresión que sea producida por las instrucciones de impresión durante la ejecución.
+- El programa debe producir una imagen al final de todo programa, aun cuando no se haya realizado ningún movimiento, en ese caso se produciría una imagen "vacía", es decir, de 1x1 píxeles que está encendido. El archivo `pbm` representa una matriz de píxeles donde se indican cuales están encendidos y cuales no, ese archivo debe tener el mismo nombre del programa que lo produjo y debe cortarse todo borde que contenga pixiles apagados. Dicho de otra manera la imagen se ajusta a los píxeles encendidos. Si un programa dibuja una línea a la derecha, no va a mostrar un espacio vacío de cierta longitud del lado izquierdo y menos existirán espacios vaciós en el eje `Y` con el objetivo de que exista algún marco. Cada paso que se indica en una función de movimiento es un píxel.
+
+- La entrega será hasta el día `viernes 31 de marzo`, hora máxima `11:59pm` y no habrá posibiladad de prórroga.
+- La entrega de esta etapa debe hacerse enviando un correo a `09-10444@usb.ve`, con `[CI3725]` como prefijo en el asunto y junto al correo, un archivo comprimido `.tar.gz`. Siguiendo los siguientes lineamientos.
+    - El comprimido sólo debe tener los archivos fuentes necesarios para correr su programa.
+    - El comprimido debe tener como nombre `CI3725_etapa_4_xx-xxxxx_xx-xxxxx.tar.gz`
+    - `xx-xxxxx` será sustituido por el carné de los miembros del grupo
+    - Si la entrega es realizada por alguien que no tiene pareja, el nombre del comprimido será `CI3725_etapa_4_xx-xxxxx.tar.gz`.
+
+[documento]: <https://github.com/dvdalilue/retina/blob/master/lenguaje/especificacion.md>
