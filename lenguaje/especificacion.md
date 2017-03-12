@@ -118,8 +118,8 @@ Estos operadores forman expresiones a partir de operandos de tipo `number` y al 
     - Operadores binarios.
     - Asociatividad izquierda. Evalúa de izquierda a derecha.
     - `*` corresponde a la producto entre los operandos.
-    - `/` y `%` corresponden a la división exacta y resto exacto entre los operandos, respectivamente. En caso de que el operando izquierdo sea `0`, habrá error.
-    - `div` y `mod` corresponden a la división entera y resto entero entre los operandos, respectivamente. En caso de que el operando izquierdo sea `0`, habrá error.
+    - `/` y `%` corresponden a la división exacta y resto exacto entre los operandos, respectivamente. En caso de que el operando derecho sea `0`, habrá error.
+    - `div` y `mod` corresponden a la división entera y resto entero entre los operandos, respectivamente. En caso de que el operando derecho sea `0`, habrá error.
 - `+` y `-`
     - Operadores binarios.
     - Asociatividad izquierda. Evalúa de izquierda a derecha.
