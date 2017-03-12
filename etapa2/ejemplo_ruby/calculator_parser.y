@@ -22,7 +22,7 @@ start Calculator
 
 rule
     
-    Calculator: Expression
+    Calculator: Expression                  { result = val[0]                             }
               ;
 
     Expression: 'digit'                     { result = Number.new(val[0])                 }
