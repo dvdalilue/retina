@@ -49,7 +49,7 @@ begin
         boolean b;
     do
         b = x < y;
-        if b do
+        if b then
             return x;
         end;
         return y;
