@@ -8,7 +8,7 @@ program
         number angle = 0;
     do
         while angle <= 360 do
-            rotater(angle);
+            rotater(15);
             circle(100);
             angle = angle + 15;
         end;
