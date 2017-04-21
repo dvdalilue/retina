@@ -1,0 +1,40 @@
+func square_R_U(number edge)
+begin
+    repeat 4 times
+        forward(edge);
+        rotater(90);
+    end;
+    #rotater(90);
+end;
+
+func power(number x) -> number
+begin
+    return x * x;
+end;
+
+program
+    closeeye();
+    
+    repeat 2 times
+        rotatel(90);
+        forward(500);
+    end;
+    rotatel(180);
+    openeye();
+    #square_R_U(50);
+
+    #setposition(-10,10);
+    rotater(45);
+    for i from 1 to 500 do
+        rotatel(45);
+        writeln(i);
+        with
+            number tmp;
+        do
+            tmp = power(i);
+            square_R_U( i );
+        end;
+        rotater(45);
+        forward(2);
+    end;
+end;

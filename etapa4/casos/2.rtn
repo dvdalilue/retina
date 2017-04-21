@@ -1,0 +1,106 @@
+func square_R_U(number edge)
+begin
+    repeat 4 times
+        forward(edge);
+        rotater(90);
+    end;
+end;
+
+func foo()
+begin
+    repeat 4 times
+        rotatel(45);
+        square_R_U(75);
+        rotater(90);
+        rotater(45);
+        forward(10);
+    end;
+end;
+
+func bar()
+begin
+        rotater(45);
+        forward(75);
+        rotatel(45);
+        forward(10);
+end;
+
+func baz()
+begin
+    with
+        number i;
+    do
+        foo();
+        while i < 15 do
+            rotatel(45);
+            forward(75);
+            rotatel(45);
+            forward(10);
+            rotater(90);
+            foo();
+            i = i + 1;
+        end;
+
+        #i = 0;
+
+        while i > -15 do
+            rotater(90);
+            forward(10);
+            rotater(45);
+            forward(75);
+            rotatel(135);
+            foo();
+            i = i - 1;
+        end;
+
+    end;
+
+    closeeye();
+    repeat 15 times
+        rotatel(45);
+        forward(75);
+        rotatel(45);
+        forward(10);
+        rotater(90);
+    end;
+    openeye();
+end;
+
+func meh(number x)
+begin
+    if false then
+        
+    end;
+    meh(x);
+end;
+
+program
+#    baz();
+#    bar();
+#    baz();
+#    bar();
+#    baz();
+#    bar();
+#    baz();
+
+    closeeye();
+    rotatel(135);
+    forward(650);
+    rotatel(180);
+   openeye();
+    repeat 15 times
+        baz();
+        bar();
+    end;
+    #bar();
+            #repeat 10 times
+            #rotater(90);
+            #forward(10);
+            #rotater(45);
+            #forward(75);
+            #rotatel(135);
+            #foo();
+        #end;
+    #baz();
+    #forward(100);
+end;
